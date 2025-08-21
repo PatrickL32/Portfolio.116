@@ -2,18 +2,18 @@ from django.db import models
 
 # Create your models here.
 
-class skill(models.model):
+class Skill(models.Model):
     name = models.CharField(max_length=100)
 
-    
 
 
-class project(models.model):
+
+class Project(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     year = models.IntegerField()
-    image = models.ImageField(upload_to='prjects/')
-    skills = models.ManyToManyField('skill')
+    image = models.ImageField(upload_to='projects/')
+    skills = models.ManyToManyField('Skill')
     repository = models.URLField()
 
 
