@@ -18,11 +18,21 @@ from django.contrib import admin
 from django.urls import path,include
 from  django.conf import settings
 from django.conf.urls.static import static
+# In your project's main urls.py (e.g., config/urls.py)
+
+from django.contrib import admin
+from django.urls import path
+from projects import views # <-- IMPORT the views from your app
 
 urlpatterns = [
+    # Add this line for the homepage
+    path('', views.home_view, name='home'),
+
+    # Your existing URLs
     path('admin/', admin.site.urls),
-    path('', include('pages.urls')),
-    
+    path('about/', ... ), # Assumes you have an 'about' view
+    path('projects/', ... ), # Assumes you have a 'projects' view
+    # ... other paths
 ]
 
 urlpatterns+=static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
