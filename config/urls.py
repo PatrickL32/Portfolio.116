@@ -20,10 +20,6 @@ from  django.conf import settings
 from django.conf.urls.static import static
 # In your project's main urls.py (e.g., config/urls.py)
 
-from django.contrib import admin
-from django.urls import path
-from projects import views # <-- IMPORT the views from your app
-
 urlpatterns = [
     # Add this line for the homepage
     path('', views.home_view, name='home'),
