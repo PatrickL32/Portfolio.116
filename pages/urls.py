@@ -1,7 +1,9 @@
 from django.urls import path
-from .views import  aboutPageView, projectsPageView
+from pages import views
 
 urlpatterns = [
-    path('about/', aboutPageView, name='about'),
-    path('projects/', projectsPageView, name="projects"),
+    path('', views.about_me, name='about_me'),
+    path('experience/',views.experience, name='experience'),
+    path('contact/',views.contact_view, name='contact' ),
+    path('projects/',views.projects_list, name="projects"),
 ]

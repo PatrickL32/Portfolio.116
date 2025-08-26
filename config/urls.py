@@ -22,13 +22,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     # Add this line for the homepage
-    path('', views.home_view, name='home'),
+    
 
     # Your existing URLs
     path('admin/', admin.site.urls),
-    path('about/', ... ), # Assumes you have an 'about' view
-    path('projects/', ... ), # Assumes you have a 'projects' view
-    # ... other paths
+    path('',include('pages.urls')),
 ]
 
 urlpatterns+=static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
