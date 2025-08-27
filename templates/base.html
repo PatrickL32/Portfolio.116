@@ -1,18 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <body>
-<header>
-    <h1>Portfolio</h1>
-<nav>
-    <a href="/about.html">About me</a>
-    <a href="/projects.html">Projects</a>
-    <a href="/skills.html">Skills</a>
-</nav>
-</header>
-{% block content %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+
+        <nav>
+            <a href="{% url 'about_me'%}">About me</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'experience' %}">Experience</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+    {% block content %}
     {% endblock content %}
 </body>
 

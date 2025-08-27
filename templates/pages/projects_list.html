@@ -7,19 +7,19 @@
 
         <div class="projects-list">
             <!--All the Cards-->
-            {% for projects in projects_list %}
+            {% for project in projects_list %}
             <div class="project-card">
                 <a href="{{project.repository}}" target="_blank">
-                    <img src="{% static 'img/picture-1.jpg' %}">
+                    <img class="project-img" src="{{project.image.url}}" alt="Project Image" class="project-image">
                     <p>{{project.name}}</p>
                     <p>{{project.description}}</p>
                     <p>{{project.year}}</p>
 
                     <div class="skills-container center">
-                        <label class="text-label">Skill</label>
-                        <label class="text-label">Skill</label>
-                        <label class="text-label">Skill</label>
-                        <label class="text-label">Skill</label>
+                        <label class="text-label">HTML</label>
+                        <label class="text-label">css</label>
+                        <label class="text-label">Javascript</label>
+                        <label class="text-label">React</label>
                     </div>
                 </a>
             </div>
