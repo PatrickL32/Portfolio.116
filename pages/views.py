@@ -4,6 +4,9 @@ from. forms import ContactForm
 from django.core.mail import send_mail as send_email
 
 # Create your views here.
+def about_view(request):
+    return render(request, 'your_app/about_me.html')
+
 def about_me(request):
     return render(request, 'pages/about_me.html')
 

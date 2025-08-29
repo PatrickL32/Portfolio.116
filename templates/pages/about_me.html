@@ -1,6 +1,16 @@
 {% extends 'base.html'%}
 
-{% block content %}
-    <h1>About</h1>
-    <P> This page is all about me.</P>
+{% load static %}{% block content %}
+    
+    
+    <img class="selfie-img" src="{% static './img/selfie.jpg' %}" alt="A photo of me">
+    
+    
+    <P> I'm patrick lewis and I am from North county San Diego.
+        I am currently a student at San Diego Global Knowledge University studying full stack web development.
+        I have a passion for coding and My favorite coding language is Django because it is easy to learn.
+        I also enjoy working with HTML and CSS to create a visually appleaning websites.I always strive to 
+        be a student of life and learn new things every day. during my free time I enjoy watching movies 
+        and tv shows, playing video games on my phone, and spending time with friends.
+    </P>
 {% endblock content %}

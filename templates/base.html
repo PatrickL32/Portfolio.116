@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick's Porfolio|{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
     <header>
-        <h1>Portfolio</h1>
+        <h1> Patrick's Portfolio</h1>
 
         <nav>
             <a href="{% url 'about_me'%}">About me</a>
@@ -17,8 +18,18 @@
             <a href="{% url 'contact' %}">Contact</a>
         </nav>
     </header>
-    {% block content %}
-    {% endblock content %}
-</body>
 
+    <div class="main-content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 Patrick Lewis. All Rights Reserved.</p>
+    </footer>
+    </body>
 </html>
